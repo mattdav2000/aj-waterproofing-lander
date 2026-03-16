@@ -85,32 +85,10 @@
         .navbar-logo {
             display: flex;
             align-items: center;
-            gap: 12px;
         }
-        .logo-icon {
-            width: 52px;
+        .navbar-logo img {
             height: 52px;
-            background: var(--blue-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 900;
-            font-size: 18px;
-        }
-        .logo-text {
-            font-size: 22px;
-            font-weight: 800;
-            color: var(--blue-dark);
-            line-height: 1.1;
-        }
-        .logo-text span {
-            display: block;
-            font-size: 11px;
-            font-weight: 500;
-            color: var(--gray-600);
-            letter-spacing: 0.5px;
+            width: auto;
         }
         .navbar-ctas {
             display: flex;
@@ -903,9 +881,12 @@
             margin-bottom: 40px;
         }
         .footer-brand .logo-text-footer {
-            font-size: 24px;
-            font-weight: 800;
             margin-bottom: 12px;
+        }
+        .footer-brand .logo-text-footer img {
+            height: 48px;
+            width: auto;
+            filter: brightness(0) invert(1);
         }
         .footer-brand p {
             font-size: 14px;
@@ -1081,11 +1062,7 @@
     <div class="container">
         <div class="navbar-inner">
             <a href="#" class="navbar-logo">
-                <div class="logo-icon">A.J.</div>
-                <div class="logo-text">
-                    Waterproofing
-                    <span>Specializing in Basement Waterproofing</span>
-                </div>
+                <img src="https://ajwaterproofing.com/wp-content/uploads/aj-waterproofing-logo.png" alt="A.J. Waterproofing">
             </a>
             <div class="navbar-ctas">
                 <a href="tel:6104090888" class="btn-phone">
@@ -1604,7 +1581,7 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <div class="logo-text-footer">A.J. Waterproofing</div>
+                <div class="logo-text-footer"><img src="https://ajwaterproofing.com/wp-content/uploads/aj-waterproofing-logo.png" alt="A.J. Waterproofing"></div>
                 <p>Family-owned basement waterproofing company serving the Philadelphia suburbs since 1976. The owner is on every job — no salesmen, no subcontractors.</p>
                 <a href="tel:6104090888" class="footer-phone">
                     <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
