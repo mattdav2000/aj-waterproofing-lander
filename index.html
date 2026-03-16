@@ -241,6 +241,48 @@
             border-right: 1px solid var(--gray-300);
         }
 
+        /* ===== ICON TRUST STRIP ===== */
+        .icon-trust-strip {
+            background: var(--white);
+            padding: 36px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .icon-trust-strip-inner {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .icon-trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+            gap: 12px;
+        }
+        .icon-trust-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--blue-lightest);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .icon-trust-icon svg {
+            width: 26px;
+            height: 26px;
+            fill: var(--blue-primary);
+        }
+        .icon-trust-label {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--blue-dark);
+            line-height: 1.3;
+        }
+
         /* ===== 3. TRUST BAR ===== */
         .trust-bar {
             background: var(--blue-lightest);
@@ -1299,6 +1341,10 @@
             .how-it-works-grid { grid-template-columns: 1fr; gap: 40px; }
             .how-it-step:not(:last-child)::after { display: none; }
             .financing-grid { grid-template-columns: 1fr; gap: 40px; }
+            .icon-trust-strip { padding: 28px 0; }
+            .icon-trust-icon { width: 44px; height: 44px; }
+            .icon-trust-icon svg { width: 22px; height: 22px; }
+            .icon-trust-label { font-size: 13px; }
             .social-proof-bar { gap: 16px; font-size: 13px; }
             .social-proof-bar-item:not(:last-child) { padding-right: 16px; }
         }
@@ -1365,6 +1411,12 @@
             .financing-cta-card p { font-size: 14px; }
             .financing-point { gap: 12px; }
             .financing-point-text { font-size: 14px; }
+            .icon-trust-strip { padding: 24px 0; }
+            .icon-trust-strip-inner { flex-wrap: wrap; justify-content: center; gap: 24px; }
+            .icon-trust-item { flex: 0 0 calc(33.33% - 16px); }
+            .icon-trust-icon { width: 42px; height: 42px; }
+            .icon-trust-icon svg { width: 20px; height: 20px; }
+            .icon-trust-label { font-size: 12px; }
             .social-proof-bar { padding: 16px 0; gap: 12px; font-size: 12px; }
             .social-proof-bar-item:not(:last-child) { padding-right: 12px; }
             .exit-popup { padding: 32px; max-width: 90%; }
@@ -1397,6 +1449,10 @@
             .financing-cta-card { padding: 20px; }
             .exit-popup { padding: 24px; }
             .exit-popup h3 { font-size: 16px; }
+            .icon-trust-strip { padding: 20px 0; }
+            .icon-trust-strip-inner { gap: 16px; }
+            .icon-trust-item { flex: 0 0 calc(50% - 8px); }
+            .icon-trust-label { font-size: 11px; }
             .social-proof-bar { font-size: 11px; gap: 8px; }
             .social-proof-bar-item:not(:last-child) { padding-right: 8px; }
         }
@@ -1536,6 +1592,44 @@
                     <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                     Free quote in 24 hrs &bull; No obligation &bull; Lifetime guarantee
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ICON TRUST STRIP ===== -->
+<section class="icon-trust-strip fade-up">
+    <div class="container">
+        <div class="icon-trust-strip-inner">
+            <div class="icon-trust-item">
+                <div class="icon-trust-icon">
+                    <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                </div>
+                <span class="icon-trust-label">Over 40 Years<br>in Business</span>
+            </div>
+            <div class="icon-trust-item">
+                <div class="icon-trust-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                </div>
+                <span class="icon-trust-label">Lifetime<br>Warranty</span>
+            </div>
+            <div class="icon-trust-item">
+                <div class="icon-trust-icon">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                </div>
+                <span class="icon-trust-label">24/7<br>Service</span>
+            </div>
+            <div class="icon-trust-item">
+                <div class="icon-trust-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <span class="icon-trust-label">4.8 Stars<br>on Google</span>
+            </div>
+            <div class="icon-trust-item">
+                <div class="icon-trust-icon">
+                    <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                </div>
+                <span class="icon-trust-label">Flexible<br>Financing</span>
             </div>
         </div>
     </div>
