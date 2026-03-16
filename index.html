@@ -551,76 +551,8 @@
         }
 
         /* ===== EXIT POPUP ===== */
-        .exit-overlay {
+        .placeholder-removed {
             display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: 10000;
-        }
-        .exit-overlay.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .exit-popup {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 40px;
-            max-width: 480px;
-            width: 90%;
-            position: relative;
-            box-shadow: var(--shadow-xl);
-        }
-        .exit-popup-close {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            width: 32px;
-            height: 32px;
-            background: transparent;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: var(--gray-600);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .exit-popup-close:hover {
-            color: var(--gray-900);
-        }
-        .exit-popup h3 {
-            font-size: 22px;
-            font-weight: 800;
-            color: var(--blue-dark);
-            margin-bottom: 8px;
-        }
-        .exit-popup-sub {
-            font-size: 15px;
-            color: var(--gray-600);
-            margin-bottom: 28px;
-            line-height: 1.6;
-        }
-        .exit-popup .zip-form {
-            margin-bottom: 20px;
-        }
-        .exit-popup-phone {
-            text-align: center;
-            font-size: 14px;
-            color: var(--gray-600);
-            padding-top: 20px;
-            border-top: 1px solid var(--gray-200);
-        }
-        .exit-popup-phone a {
-            color: var(--blue-primary);
-            font-weight: 700;
-            font-size: 16px;
-            display: block;
-            margin-top: 4px;
         }
 
         /* ===== 4. BEFORE/AFTER ===== */
@@ -1474,9 +1406,6 @@
             .icon-trust-label { font-size: 12px; }
             .social-proof-bar { padding: 16px 0; gap: 12px; font-size: 12px; }
             .social-proof-bar-item:not(:last-child) { padding-right: 12px; }
-            .exit-popup { padding: 32px; max-width: 90%; }
-            .exit-popup h3 { font-size: 18px; }
-            .exit-popup-sub { font-size: 14px; margin-bottom: 20px; }
         }
 
         /* ===== VERY SMALL MOBILE ===== */
@@ -1502,8 +1431,6 @@
             .value-heading h2, .how-it-works-heading h2, .financing-heading h2, .faq-heading h2 { font-size: 22px; }
             .how-it-number { width: 72px; height: 72px; font-size: 28px; }
             .financing-cta-card { padding: 20px; }
-            .exit-popup { padding: 24px; }
-            .exit-popup h3 { font-size: 16px; }
             .icon-trust-strip { padding: 20px 0; }
             .icon-trust-strip-inner { gap: 16px; }
             .icon-trust-item { flex: 0 0 calc(50% - 8px); }
@@ -2343,21 +2270,6 @@
     </div>
 </div>
 
-<!-- ===== EXIT INTENT POPUP ===== -->
-<div class="exit-overlay" id="exitOverlay">
-    <div class="exit-popup">
-        <button class="exit-popup-close" onclick="closeExitPopup()">×</button>
-        <h3>Wait — Don't Leave With a Wet Basement</h3>
-        <p class="exit-popup-sub">Get your free inspection from the owner himself. No obligation.</p>
-        <form class="zip-form" id="exitZipForm" onsubmit="handleExitZip(event)">
-            <input type="text" id="exitZip" placeholder="Enter your zip code" maxlength="5" pattern="[0-9]{5}" required>
-            <button type="submit">Get Free Inspection</button>
-        </form>
-        <div class="exit-popup-phone">
-            Or call <a href="tel:6104090888">(610) 409-0888</a>
-        </div>
-    </div>
-</div>
 
 <!-- ===== JAVASCRIPT ===== -->
 <script>
@@ -2460,45 +2372,6 @@ document.querySelectorAll('input[maxlength="5"]').forEach(input => {
     });
 });
 
-// Exit-intent popup
-let exitPopupShown = false;
-document.addEventListener('mouseleave', function(e) {
-    if (e.clientY <= 0 && !exitPopupShown && window.innerWidth > 768) {
-        if (!sessionStorage.getItem('exitPopupShown')) {
-            showExitPopup();
-            exitPopupShown = true;
-            sessionStorage.setItem('exitPopupShown', 'true');
-        }
-    }
-});
-
-function showExitPopup() {
-    document.getElementById('exitOverlay').classList.add('active');
-}
-
-function closeExitPopup() {
-    document.getElementById('exitOverlay').classList.remove('active');
-}
-
-function handleExitZip(e) {
-    e.preventDefault();
-    const zip = document.getElementById('exitZip').value;
-    if (zip && zip.length === 5) {
-        document.getElementById('formZip').value = zip;
-        closeExitPopup();
-        document.getElementById('form-section').scrollIntoView({ behavior: 'smooth' });
-        setTimeout(() => {
-            document.getElementById('service').focus();
-        }, 600);
-    }
-}
-
-// Close popup when clicking overlay background
-document.getElementById('exitOverlay')?.addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeExitPopup();
-    }
-});
 </script>
 
 </body>
