@@ -928,11 +928,54 @@
             opacity: 0.6;
         }
 
-        /* ===== MOBILE RESPONSIVE ===== */
+        /* ===== ULTRAWIDE / LARGE SCREEN ===== */
+        @media (min-width: 1600px) {
+            .container { max-width: 1400px; }
+            .hero h1 { font-size: 52px; }
+            .hero-sub { font-size: 20px; }
+            .hero { padding: 90px 0 100px; }
+            .hero-inner { gap: 80px; }
+            .section-pad { padding: 100px 0; }
+            .trust-bar-heading { font-size: 32px; }
+            .ba-grid { max-width: 1100px; }
+            .ba-card { height: 380px; }
+            .accordion { max-width: 1000px; }
+            .problems-grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+            .value-grid { max-width: 1100px; }
+            .stats-grid { gap: 48px; }
+            .stat-item h3 { font-size: 52px; }
+            .review-card { min-width: 380px; }
+            .footer-grid { gap: 60px; }
+        }
+        @media (min-width: 2000px) {
+            .container { max-width: 1600px; }
+            .hero h1 { font-size: 60px; }
+            .hero-sub { font-size: 22px; }
+            .hero-inner { gap: 100px; }
+            .hero-form-card { padding: 48px; }
+            .hero-form-card h2 { font-size: 26px; }
+            .ba-grid { max-width: 1300px; }
+            .ba-card { height: 420px; }
+            .accordion { max-width: 1200px; }
+            .problems-heading h2, .services-heading h2, .reviews-heading h2,
+            .value-heading h2, .ba-heading { font-size: 38px; }
+            .problems-grid { gap: 36px; }
+            .problem-card { padding: 40px 32px; }
+            .value-grid { max-width: 1300px; gap: 28px; }
+            .stats { padding: 80px 0; }
+            .cta-band { padding: 60px 0; }
+            .cta-band h2 { font-size: 34px; }
+            .review-card { min-width: 420px; padding: 36px; }
+            .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 80px; }
+        }
+
+        /* ===== TABLET ===== */
         @media (max-width: 968px) {
             .hero-inner { grid-template-columns: 1fr; gap: 40px; }
             .hero h1 { font-size: 36px; }
+            .hero-form-card { max-width: 520px; margin: 0 auto; }
             .form-layout { grid-template-columns: 1fr; }
+            .form-card { max-width: 520px; margin: 0 auto; }
             .trust-benefits { grid-template-columns: repeat(2, 1fr); }
             .problems-grid { grid-template-columns: repeat(2, 1fr); }
             .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
@@ -940,24 +983,72 @@
             .footer-grid { grid-template-columns: 1fr 1fr; }
             .accordion-body-inner { grid-template-columns: 1fr; }
         }
+
+        /* ===== MOBILE ===== */
         @media (max-width: 640px) {
-            .hero h1 { font-size: 28px; }
-            .hero { padding: 40px 0 50px; }
+            .container { padding: 0 16px; }
+            .hero h1 { font-size: 26px; }
+            .hero-sub { font-size: 16px; margin-bottom: 24px; }
+            .hero { padding: 32px 0 40px; }
+            .hero-form-card { padding: 24px; }
+            .hero-form-card h2 { font-size: 19px; }
             .section-pad { padding: 50px 0; }
-            .trust-benefits { grid-template-columns: 1fr; }
+            .trust-bar { padding: 36px 0; }
+            .trust-bar-heading { font-size: 22px; margin-bottom: 24px; }
+            .trust-benefits { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .trust-benefit { padding: 12px; }
+            .trust-benefit h3 { font-size: 13px; }
+            .trust-benefit-icon { width: 44px; height: 44px; border-radius: 10px; }
+            .trust-benefit-icon svg { width: 22px; height: 22px; }
+            .ba-heading { font-size: 24px; }
+            .problems-heading h2, .services-heading h2, .reviews-heading h2,
+            .value-heading h2 { font-size: 24px; }
+            .problems-sub, .services-sub, .value-sub { font-size: 14px; }
             .problems-grid { grid-template-columns: 1fr; }
+            .problem-card { padding: 24px 20px; }
             .value-grid { grid-template-columns: 1fr; }
-            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .stats-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+            .stat-item h3 { font-size: 36px; }
+            .stats-heading h2 { font-size: 22px; }
             .zip-form { flex-direction: column; }
+            .navbar-logo img { height: 36px; }
             .navbar-ctas .btn-phone span { display: none; }
+            .btn-estimate { padding: 10px 16px; font-size: 13px; }
             .footer-grid { grid-template-columns: 1fr; }
             .ba-grid { grid-template-columns: 1fr; }
+            .ba-card { height: 240px; }
+            .form-card { padding: 24px; }
+            .form-card h2 { font-size: 22px; }
             .form-row { grid-template-columns: 1fr; }
+            .form-section { padding: 50px 0; }
+            .form-trust-content h3 { font-size: 22px; }
+            .form-trust-badges { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .form-trust-badge { padding: 14px; }
+            .cta-band { padding: 32px 0; }
+            .cta-band h2 { font-size: 22px; }
+            .cta-band p { font-size: 14px; }
             .cta-band-btns { flex-direction: column; }
             .btn-cta-white, .btn-cta-outline { width: 100%; justify-content: center; }
-            .review-card { min-width: 280px; }
-            .form-trust-badges { grid-template-columns: 1fr; }
+            .review-card { min-width: 260px; padding: 20px; }
+            .review-text { font-size: 14px; min-height: auto; }
+            .accordion-header { font-size: 15px; padding: 16px 20px; }
+            .accordion-body-inner { padding: 0 20px 20px; }
             .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+            .footer-brand .logo-text-footer img { height: 36px; }
+            .top-bar { font-size: 12px; padding: 6px 0; }
+            .top-bar-inner { gap: 10px; }
+        }
+
+        /* ===== VERY SMALL MOBILE ===== */
+        @media (max-width: 380px) {
+            .hero h1 { font-size: 22px; }
+            .hero-form-card { padding: 20px; }
+            .navbar-logo img { height: 30px; }
+            .btn-estimate { padding: 8px 12px; font-size: 12px; }
+            .trust-benefits { grid-template-columns: 1fr; }
+            .form-trust-badges { grid-template-columns: 1fr; }
+            .stats-grid { gap: 16px; }
+            .stat-item h3 { font-size: 28px; }
         }
 
         /* ===== ANIMATIONS ===== */
