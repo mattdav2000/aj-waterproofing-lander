@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AJ Waterproofing | Basement Waterproofing Experts Since 1976 | Free Estimate</title>
+    <title>AJ Waterproofing | Basement Waterproofing Experts Since 1976 | Free Inspection</title>
     <meta name="description" content="Family-owned basement waterproofing company since 1976. The owner is on every job. Lifetime transferable guarantee. Serving Montgomery, Chester, Delaware & Bucks Counties. Call (610) 409-0888.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -150,6 +150,16 @@
             font-style: normal;
             color: var(--blue-light);
         }
+        .urgency-badge {
+            display: inline-block;
+            background: #FCD34D;
+            color: #1a1a2e;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
         .hero-sub {
             font-size: 18px;
             opacity: 0.9;
@@ -208,6 +218,29 @@
         }
         .hero-form-trust svg { width: 16px; height: 16px; fill: #16a34a; flex-shrink: 0; }
 
+        /* ===== SOCIAL PROOF BAR ===== */
+        .social-proof-bar {
+            background: var(--gray-100);
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: var(--gray-700);
+            font-weight: 600;
+        }
+        .social-proof-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .social-proof-bar-item:not(:last-child) {
+            padding-right: 32px;
+            border-right: 1px solid var(--gray-300);
+        }
+
         /* ===== 3. TRUST BAR ===== */
         .trust-bar {
             background: var(--blue-lightest);
@@ -250,6 +283,285 @@
             color: var(--blue-dark);
         }
 
+        /* ===== HOW IT WORKS ===== */
+        .how-it-works {
+            background: var(--white);
+            padding: 80px 0;
+        }
+        .how-it-works-heading {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .how-it-works-heading h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--blue-dark);
+        }
+        .how-it-works-heading h2 em {
+            font-style: normal;
+            color: var(--red-cta);
+        }
+        .how-it-works-sub {
+            text-align: center;
+            color: var(--gray-600);
+            font-size: 16px;
+            max-width: 700px;
+            margin: 0 auto 48px;
+        }
+        .how-it-works-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .how-it-step {
+            text-align: center;
+            position: relative;
+        }
+        .how-it-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: calc(50% + 48px);
+            width: calc(100% - 96px);
+            height: 2px;
+            background: var(--blue-primary);
+            opacity: 0.3;
+        }
+        .how-it-number {
+            width: 96px;
+            height: 96px;
+            background: var(--blue-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: 900;
+            color: var(--white);
+            margin: 0 auto 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .how-it-icon {
+            width: 40px;
+            height: 40px;
+            fill: var(--white);
+        }
+        .how-it-step h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--blue-dark);
+            margin-bottom: 12px;
+        }
+        .how-it-step p {
+            font-size: 15px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* ===== FINANCING SECTION ===== */
+        .financing-section {
+            background: var(--white);
+            padding: 80px 0;
+        }
+        .financing-heading {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .financing-heading h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--blue-dark);
+        }
+        .financing-heading h2 em {
+            font-style: normal;
+            color: var(--red-cta);
+        }
+        .financing-sub {
+            text-align: center;
+            color: var(--gray-600);
+            font-size: 16px;
+            max-width: 700px;
+            margin: 0 auto 48px;
+        }
+        .financing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1000px;
+            margin: 0 auto;
+            align-items: start;
+        }
+        .financing-points {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .financing-point {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .financing-point-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--blue-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .financing-point-icon svg {
+            width: 12px;
+            height: 12px;
+            fill: var(--white);
+        }
+        .financing-point-text {
+            font-size: 15px;
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+        .financing-cta-card {
+            background: var(--blue-lightest);
+            border-radius: 16px;
+            padding: 36px;
+            text-align: center;
+        }
+        .financing-cta-card h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--blue-dark);
+            margin-bottom: 12px;
+        }
+        .financing-cta-card p {
+            font-size: 15px;
+            color: var(--gray-600);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        .financing-cta-card .btn-next {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .financing-cta-card .financing-phone {
+            font-size: 14px;
+            color: var(--gray-600);
+        }
+        .financing-cta-card .financing-phone a {
+            color: var(--blue-primary);
+            font-weight: 700;
+            font-size: 16px;
+            display: block;
+            margin-top: 4px;
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq-section {
+            background: var(--gray-50);
+            padding: 80px 0;
+        }
+        .faq-heading {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .faq-heading h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--blue-dark);
+        }
+        .faq-heading h2 em {
+            font-style: normal;
+            color: var(--red-cta);
+        }
+        .faq-sub {
+            text-align: center;
+            color: var(--gray-600);
+            font-size: 16px;
+            max-width: 700px;
+            margin: 0 auto 48px;
+        }
+        .faq-accordion {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* ===== EXIT POPUP ===== */
+        .exit-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 10000;
+        }
+        .exit-overlay.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .exit-popup {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 480px;
+            width: 90%;
+            position: relative;
+            box-shadow: var(--shadow-xl);
+        }
+        .exit-popup-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 32px;
+            height: 32px;
+            background: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--gray-600);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .exit-popup-close:hover {
+            color: var(--gray-900);
+        }
+        .exit-popup h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--blue-dark);
+            margin-bottom: 8px;
+        }
+        .exit-popup-sub {
+            font-size: 15px;
+            color: var(--gray-600);
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+        .exit-popup .zip-form {
+            margin-bottom: 20px;
+        }
+        .exit-popup-phone {
+            text-align: center;
+            font-size: 14px;
+            color: var(--gray-600);
+            padding-top: 20px;
+            border-top: 1px solid var(--gray-200);
+        }
+        .exit-popup-phone a {
+            color: var(--blue-primary);
+            font-weight: 700;
+            font-size: 16px;
+            display: block;
+            margin-top: 4px;
+        }
+
         /* ===== 4. BEFORE/AFTER ===== */
         .before-after { padding: 70px 0; background: var(--white); }
         .ba-heading {
@@ -276,6 +588,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background-size: cover;
+            background-position: center;
         }
         .ba-card-label {
             position: absolute;
@@ -982,6 +1296,11 @@
             .value-grid { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { grid-template-columns: 1fr 1fr; }
             .accordion-body-inner { grid-template-columns: 1fr; }
+            .how-it-works-grid { grid-template-columns: 1fr; gap: 40px; }
+            .how-it-step:not(:last-child)::after { display: none; }
+            .financing-grid { grid-template-columns: 1fr; gap: 40px; }
+            .social-proof-bar { gap: 16px; font-size: 13px; }
+            .social-proof-bar-item:not(:last-child) { padding-right: 16px; }
         }
 
         /* ===== MOBILE ===== */
@@ -1002,8 +1321,8 @@
             .trust-benefit-icon svg { width: 22px; height: 22px; }
             .ba-heading { font-size: 24px; }
             .problems-heading h2, .services-heading h2, .reviews-heading h2,
-            .value-heading h2 { font-size: 24px; }
-            .problems-sub, .services-sub, .value-sub { font-size: 14px; }
+            .value-heading h2, .how-it-works-heading h2, .financing-heading h2, .faq-heading h2 { font-size: 24px; }
+            .problems-sub, .services-sub, .value-sub, .how-it-works-sub, .financing-sub, .faq-sub { font-size: 14px; }
             .problems-grid { grid-template-columns: 1fr; }
             .problem-card { padding: 24px 20px; }
             .value-grid { grid-template-columns: 1fr; }
@@ -1037,6 +1356,20 @@
             .footer-brand .logo-text-footer img { height: 36px; }
             .top-bar { font-size: 12px; padding: 6px 0; }
             .top-bar-inner { gap: 10px; }
+            .urgency-badge { font-size: 12px; padding: 6px 12px; margin-bottom: 12px; }
+            .how-it-number { width: 80px; height: 80px; font-size: 32px; margin-bottom: 16px; }
+            .how-it-step h3 { font-size: 16px; }
+            .how-it-step p { font-size: 14px; }
+            .financing-cta-card { padding: 24px; }
+            .financing-cta-card h3 { font-size: 18px; }
+            .financing-cta-card p { font-size: 14px; }
+            .financing-point { gap: 12px; }
+            .financing-point-text { font-size: 14px; }
+            .social-proof-bar { padding: 16px 0; gap: 12px; font-size: 12px; }
+            .social-proof-bar-item:not(:last-child) { padding-right: 12px; }
+            .exit-popup { padding: 32px; max-width: 90%; }
+            .exit-popup h3 { font-size: 18px; }
+            .exit-popup-sub { font-size: 14px; margin-bottom: 20px; }
         }
 
         /* ===== VERY SMALL MOBILE ===== */
@@ -1059,7 +1392,13 @@
             .accordion-header { font-size: 14px; padding: 14px 16px; }
             .section-pad { padding: 40px 0; }
             .problems-heading h2, .services-heading h2, .reviews-heading h2,
-            .value-heading h2 { font-size: 22px; }
+            .value-heading h2, .how-it-works-heading h2, .financing-heading h2, .faq-heading h2 { font-size: 22px; }
+            .how-it-number { width: 72px; height: 72px; font-size: 28px; }
+            .financing-cta-card { padding: 20px; }
+            .exit-popup { padding: 24px; }
+            .exit-popup h3 { font-size: 16px; }
+            .social-proof-bar { font-size: 11px; gap: 8px; }
+            .social-proof-bar-item:not(:last-child) { padding-right: 8px; }
         }
 
         /* ===== ANIMATIONS ===== */
@@ -1171,7 +1510,7 @@
                     <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                     <span>(610) 409-0888</span>
                 </a>
-                <a href="#form-section" class="btn-estimate">Free Estimate</a>
+                <a href="#form-section" class="btn-estimate">Free Inspection</a>
             </div>
         </div>
     </div>
@@ -1182,26 +1521,40 @@
     <div class="container">
         <div class="hero-inner">
             <div class="fade-up">
+                <div class="urgency-badge">🌧️ Spring is Peak Water Season — Limited Inspection Slots Available</div>
                 <h1>Transform Your Wet Basement Into a Dry, Healthy Space — <em>Guaranteed.</em></h1>
                 <p class="hero-sub">Family-owned since 1976. The owner is on every job. No salesmen. No subcontractors. Just nearly 50 years of hands-on expertise backed by a lifetime transferable guarantee.</p>
             </div>
             <div class="hero-form-card fade-up">
-                <h2>Get Your Free Estimate</h2>
+                <h2>Get Your Free Inspection</h2>
                 <p class="form-sub">No obligation. The owner will personally assess your home.</p>
                 <form class="zip-form" id="heroZipForm" onsubmit="handleHeroZip(event)">
                     <input type="text" id="heroZip" placeholder="Enter your zip code" maxlength="5" pattern="[0-9]{5}" required>
-                    <button type="submit">Get Free Estimate</button>
+                    <button type="submit">Get Free Inspection</button>
                 </form>
                 <div class="hero-form-trust">
                     <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                    Free estimate &bull; No obligation &bull; Lifetime guarantee
+                    Free inspection &bull; No obligation &bull; Lifetime guarantee
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ===== 3. TRUST BAR ===== -->
+<!-- ===== 3. SOCIAL PROOF BAR ===== -->
+<div class="social-proof-bar fade-up">
+    <div class="container" style="width: 100%; padding: 0;">
+        <div class="social-proof-bar" style="width: 100%; display: flex; justify-content: center; padding: 0 24px;">
+            <div class="social-proof-bar-item">4.8 ★ | 153 Reviews</div>
+            <div class="social-proof-bar-item">5.0 on Angi</div>
+            <div class="social-proof-bar-item">4.6 on Google</div>
+            <div class="social-proof-bar-item">43 Reviews on Yelp</div>
+            <div class="social-proof-bar-item">4.5 on HomeAdvisor</div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== 4. TRUST BAR ===== -->
 <section class="trust-bar fade-up">
     <div class="container">
         <h2 class="trust-bar-heading">Family-Owned Since 1976: <em>The Owner Is on Every Job</em></h2>
@@ -1234,21 +1587,42 @@
     </div>
 </section>
 
-<!-- ===== 4. BEFORE/AFTER ===== -->
+<!-- ===== 5. HOW IT WORKS ===== -->
+<section class="how-it-works fade-up">
+    <div class="container">
+        <div class="how-it-works-heading">
+            <h2>How It Works — <em>3 Simple Steps</em></h2>
+        </div>
+        <p class="how-it-works-sub">No pressure. No gimmicks. Just honest waterproofing from the owner himself.</p>
+        <div class="how-it-works-grid">
+            <div class="how-it-step">
+                <div class="how-it-number">1</div>
+                <h3>Schedule Your Free Inspection</h3>
+                <p>Call or fill out the form. A.J. DiElsi will come to your home personally — no salesmen.</p>
+            </div>
+            <div class="how-it-step">
+                <div class="how-it-number">2</div>
+                <h3>Get Your Custom Plan</h3>
+                <p>A.J. inspects your basement, diagnoses the problem, and provides an honest quote on the spot.</p>
+            </div>
+            <div class="how-it-step">
+                <div class="how-it-number">3</div>
+                <h3>We Fix It — Guaranteed</h3>
+                <p>Our crew completes the job with meticulous care. Backed by a lifetime transferable guarantee.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 6. BEFORE/AFTER ===== -->
 <section class="before-after fade-up">
     <div class="container">
         <h2 class="ba-heading">See the <em>Difference</em> We Make</h2>
         <div class="ba-grid">
-            <div class="ba-card" style="background: linear-gradient(135deg, #374151, #1f2937);">
-                <div class="ba-card-icon before-icon">
-                    <svg viewBox="0 0 24 24"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/></svg>
-                </div>
+            <div class="ba-card" style="background-image: url('https://ajwaterproofing.com/wp-content/uploads/wp-best-portfolio/vid_5ebbe75291096_300_300.jpg');">
                 <div class="ba-card-label">Before</div>
             </div>
-            <div class="ba-card" style="background: linear-gradient(135deg, #e8f1fa, #c5dcf0);">
-                <div class="ba-card-icon after-icon">
-                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                </div>
+            <div class="ba-card" style="background-image: url('https://ajwaterproofing.com/wp-content/uploads/wp-best-portfolio/vid_5ebbe753a9d69_300_300.jpg');">
                 <div class="ba-card-label">After</div>
             </div>
         </div>
@@ -1260,7 +1634,7 @@
     <div class="container">
         <div class="form-layout">
             <div class="form-card fade-up">
-                <h2>Schedule Your Free Estimate</h2>
+                <h2>Schedule Your Free Inspection</h2>
                 <p class="form-card-sub">Tell us about your project and we'll get back to you fast.</p>
 
                 <div class="form-steps">
@@ -1544,33 +1918,39 @@
         <div class="reviews-carousel" id="reviewsCarousel">
             <div class="review-card">
                 <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="review-text">From the initial visit and estimate, to the completed job, AJ Waterproofing was professional, friendly, and honest. A.J. personally handled everything.</p>
+                <p class="review-text">This guy really knows his stuff. His workers are extremely well-trained, polite and diligent. They did an incredible job and left the place spotless.</p>
+                <div class="review-author">Joe</div>
+                <div class="review-source">AJ Waterproofing Website &mdash; 5/5</div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">My husband, who is an engineer, called and AJ's wife answered the phone. He was in awe of how knowledgeable she was. AJ waterproofed my basement and did a great job!</p>
+                <div class="review-author">Cindy</div>
+                <div class="review-source">AJ Waterproofing Website &mdash; 5/5</div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">AJ's Waterproofing did a fantastic job. They were in and out in an unbelievable amount of time. He's the owner and does all the work with his crew, one job at a time.</p>
                 <div class="review-author">Verified Homeowner</div>
                 <div class="review-source">Angi &mdash; 5.0/5</div>
             </div>
             <div class="review-card">
                 <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="review-text">Thorough and professional assessment of our basement water issues. Top notch job installing the interior perimeter drain system and two sump pumps at a very reasonable price.</p>
-                <div class="review-author">Satisfied Customer</div>
-                <div class="review-source">HomeAdvisor &mdash; 5/5</div>
+                <p class="review-text">It was very apparent from the consultation that the owner is a professional who spent over an hour and a half explaining issues and options. Outstanding service.</p>
+                <div class="review-author">Homeowner</div>
+                <div class="review-source">HomeAdvisor &mdash; 4.5/5</div>
             </div>
             <div class="review-card">
                 <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="review-text">Incredibly meticulous in their workmanship and left the area cleaner than when they arrived. Every detail was handled with care.</p>
-                <div class="review-author">Happy Homeowner</div>
-                <div class="review-source">Yelp &mdash; 5/5</div>
+                <p class="review-text">I never saw anybody have such clean workers and be very respectful of my property and cover every possible inch. It's very impressive!</p>
+                <div class="review-author">Anonymous</div>
+                <div class="review-source">Google &mdash; 4.6/5</div>
             </div>
             <div class="review-card">
                 <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="review-text">A.J. was on the job from start to finish. No salesman — just the expert himself. He explained every step in detail. The best experience we've had with any contractor.</p>
-                <div class="review-author">Long-time Customer</div>
-                <div class="review-source">Google &mdash; 5/5</div>
-            </div>
-            <div class="review-card">
-                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="review-text">We had multiple estimates done but once A.J. came out, we knew we didn't need to look anywhere else. Fair pricing and outstanding workmanship with a lifetime guarantee.</p>
-                <div class="review-author">Collegeville Resident</div>
-                <div class="review-source">BBB &mdash; A+ Rating</div>
+                <p class="review-text">I called AJ Waterproofing in an emergency. We had a flooded basement. He and his crew fixed it and helped us with so many things around the house. Thank you AJ!</p>
+                <div class="review-author">Emergency Customer</div>
+                <div class="review-source">Facebook &mdash; 94% Recommended</div>
             </div>
         </div>
         <div class="carousel-nav">
@@ -1632,7 +2012,53 @@
     </div>
 </section>
 
-<!-- ===== 10. STATS ===== -->
+<!-- ===== 10. FINANCING SECTION ===== -->
+<section class="financing-section fade-up">
+    <div class="container">
+        <div class="financing-heading">
+            <h2>Affordable Solutions — <em>Financing Available</em></h2>
+        </div>
+        <p class="financing-sub">Don't let cost stop you from protecting your home.</p>
+        <div class="financing-grid">
+            <div class="financing-points">
+                <div class="financing-point">
+                    <div class="financing-point-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                    </div>
+                    <div class="financing-point-text">0% interest options available</div>
+                </div>
+                <div class="financing-point">
+                    <div class="financing-point-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                    </div>
+                    <div class="financing-point-text">Financing up to 60 months</div>
+                </div>
+                <div class="financing-point">
+                    <div class="financing-point-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                    </div>
+                    <div class="financing-point-text">No deposit required — pay upon completion</div>
+                </div>
+                <div class="financing-point">
+                    <div class="financing-point-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="currentColor"/></svg>
+                    </div>
+                    <div class="financing-point-text">All major credit cards accepted (Visa, Mastercard, Discover, Amex)</div>
+                </div>
+            </div>
+            <div class="financing-cta-card">
+                <h3>Get a Free Quote Today</h3>
+                <p>No obligation. The owner will personally assess your home and provide an honest estimate.</p>
+                <a href="#form-section" class="btn-next">Schedule Free Inspection</a>
+                <div class="financing-phone">
+                    Or call <a href="tel:6104090888">(610) 409-0888</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 11. STATS ===== -->
 <section class="stats fade-up">
     <div class="container">
         <div class="stats-heading">
@@ -1645,16 +2071,83 @@
                 <p>Founded — Nearly 50 Years of Service</p>
             </div>
             <div class="stat-item">
-                <h3>4</h3>
+                <h3>4+</h3>
                 <p>Counties Served Across PA</p>
             </div>
             <div class="stat-item">
-                <h3>5.0</h3>
-                <p>Star Rating on Angi</p>
+                <h3>4.8 ★</h3>
+                <p>Star Rating — 153 Reviews</p>
             </div>
             <div class="stat-item">
                 <h3>100%</h3>
                 <p>Owner-Operated Since Day One</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== 12. FAQ SECTION ===== -->
+<section class="faq-section fade-up">
+    <div class="container">
+        <div class="faq-heading">
+            <h2>Common Questions <em>Answered</em></h2>
+        </div>
+        <p class="faq-sub">Everything you need to know about our waterproofing services.</p>
+        <div class="faq-accordion accordion">
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    How long does basement waterproofing take?
+                    <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="accordion-body">
+                    <div class="accordion-body-inner">
+                        <p>Most jobs are completed in 1-3 days depending on the scope. A.J. and his crew start and finish one job at a time, so your project gets their full attention.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    What does the lifetime transferable guarantee cover?
+                    <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="accordion-body">
+                    <div class="accordion-body-inner">
+                        <p>Our written, transferable guarantee covers all French drain installations and waterproofing work for the lifetime of your home. If you sell your house, the guarantee transfers to the new owner.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Do you offer free inspections?
+                    <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="accordion-body">
+                    <div class="accordion-body-inner">
+                        <p>Yes — A.J. DiElsi personally visits your home, diagnoses the water problem, and provides an honest quote at no charge. There's never any obligation or deposit required.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    What areas do you serve?
+                    <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="accordion-body">
+                    <div class="accordion-body-inner">
+                        <p>We serve Montgomery, Chester, Delaware, and Bucks Counties — including Collegeville, West Chester, Norristown, Exton, Bryn Mawr, and Doylestown. We also travel out of state for referrals.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" onclick="toggleAccordion(this)">
+                    Why should I choose AJ Waterproofing over a larger company?
+                    <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </button>
+                <div class="accordion-body">
+                    <div class="accordion-body-inner">
+                        <p>With us, the owner is on every job — no salesmen, no subcontractors, no multiple crews. You get nearly 50 years of hands-on expertise, meticulous workmanship, and a lifetime guarantee. Our business is built entirely on referrals from satisfied customers.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1672,7 +2165,7 @@
             </a>
             <a href="#form-section" class="btn-cta-outline">
                 <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z"/></svg>
-                Schedule Free Estimate
+                Schedule Free Inspection
             </a>
         </div>
     </div>
@@ -1734,7 +2227,23 @@
 <div class="mobile-sticky-cta">
     <div class="mobile-sticky-cta-inner">
         <a href="tel:6104090888" class="btn-mobile-call">Call Now</a>
-        <a href="#form-section" class="btn-mobile-estimate">Free Estimate</a>
+        <a href="#form-section" class="btn-mobile-estimate">Free Inspection</a>
+    </div>
+</div>
+
+<!-- ===== EXIT INTENT POPUP ===== -->
+<div class="exit-overlay" id="exitOverlay">
+    <div class="exit-popup">
+        <button class="exit-popup-close" onclick="closeExitPopup()">×</button>
+        <h3>Wait — Don't Leave With a Wet Basement</h3>
+        <p class="exit-popup-sub">Get your free inspection from the owner himself. No obligation.</p>
+        <form class="zip-form" id="exitZipForm" onsubmit="handleExitZip(event)">
+            <input type="text" id="exitZip" placeholder="Enter your zip code" maxlength="5" pattern="[0-9]{5}" required>
+            <button type="submit">Get Free Inspection</button>
+        </form>
+        <div class="exit-popup-phone">
+            Or call <a href="tel:6104090888">(610) 409-0888</a>
+        </div>
     </div>
 </div>
 
@@ -1837,6 +2346,46 @@ document.querySelectorAll('input[maxlength="5"]').forEach(input => {
     input.addEventListener('input', function(e) {
         e.target.value = e.target.value.replace(/\D/g, '');
     });
+});
+
+// Exit-intent popup
+let exitPopupShown = false;
+document.addEventListener('mouseleave', function(e) {
+    if (e.clientY <= 0 && !exitPopupShown && window.innerWidth > 768) {
+        if (!sessionStorage.getItem('exitPopupShown')) {
+            showExitPopup();
+            exitPopupShown = true;
+            sessionStorage.setItem('exitPopupShown', 'true');
+        }
+    }
+});
+
+function showExitPopup() {
+    document.getElementById('exitOverlay').classList.add('active');
+}
+
+function closeExitPopup() {
+    document.getElementById('exitOverlay').classList.remove('active');
+}
+
+function handleExitZip(e) {
+    e.preventDefault();
+    const zip = document.getElementById('exitZip').value;
+    if (zip && zip.length === 5) {
+        document.getElementById('formZip').value = zip;
+        closeExitPopup();
+        document.getElementById('form-section').scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+            document.getElementById('service').focus();
+        }, 600);
+    }
+}
+
+// Close popup when clicking overlay background
+document.getElementById('exitOverlay')?.addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeExitPopup();
+    }
 });
 </script>
 
