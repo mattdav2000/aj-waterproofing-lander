@@ -587,13 +587,13 @@
         }
         .ba-heading em { font-style: normal; color: var(--red-cta); }
         .ba-grid {
-            position: relative;
-            width: 100%;
-            height: 400px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
             max-width: 900px;
             margin: 0 auto;
         }
-        .ba-card {position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+        .ba-card {
             border-radius: 16px;
             overflow: hidden;
             position: relative;
@@ -2444,66 +2444,6 @@ document.querySelectorAll('input[maxlength="5"]').forEach(input => {
 
 
 
-// ===== BEFORE/AFTER SLIDER =====
-function initBeforeAfterSlider() {
-    const sliders = document.querySelectorAll('.ba-grid');
-    sliders.forEach(slider => {
-        const beforeCard = slider.querySelector('.ba-card:first-child');
-        const afterCard = slider.querySelector('.ba-card:last-child');
-        
-        if (!beforeCard || !afterCard) return;
-        
-        // Create divider
-        const divider = document.createElement('div');
-        divider.className = 'ba-divider';
-        divider.style.cssText = 'position: absolute; top: 0; left: 50%; width: 4px; height: 100%; background: rgba(255,255,255,0.5); cursor: ew-resize; z-index: 5;';
-        slider.appendChild(divider);
-        
-        // Create thumb
-        const thumb = document.createElement('div');
-        thumb.style.cssText = 'position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: rgba(255,255,255,0.2); border-radius: 50%; border: 2px solid rgba(255,255,255,0.5); z-index: 4;';
-        slider.appendChild(thumb);
-        
-        // Make after card overlay with clip-path
-        afterCard.style.position = 'absolute';
-        afterCard.style.top = '0';
-        afterCard.style.left = '0';
-        afterCard.style.clipPath = 'inset(0 50% 0 0)';
-        
-        let isDragging = false;
-        const rect = slider.getBoundingClientRect();
-        
-        function updateSlider(x) {
-            const percent = ((x - rect.left) / rect.width) * 100;
-            const clampedPercent = Math.max(0, Math.min(100, percent));
-            
-            divider.style.left = clampedPercent + '%';
-            thumb.style.left = clampedPercent + '%';
-            afterCard.style.clipPath = 'inset(0 ' + (100 - clampedPercent) + '% 0 0)';
-        }
-        
-        divider.addEventListener('mousedown', () => { isDragging = true; });
-        thumb.addEventListener('mousedown', () => { isDragging = true; });
-        
-        document.addEventListener('mousemove', (e) => {
-            if (isDragging) {
-                updateSlider(e.clientX);
-            }
-        });
-        
-        document.addEventListener('mouseup', () => { isDragging = false; });
-        
-        // Touch support
-        divider.addEventListener('touchstart', () => { isDragging = true; });
-        document.addEventListener('touchmove', (e) => {
-            if (isDragging && e.touches.length > 0) {
-                updateSlider(e.touches[0].clientX);
-            }
-        });
-        document.addEventListener('touchend', () => { isDragging = false; });
-    });
-}
-
 // ===== STATS COUNT-UP ANIMATION =====
 function initStatsAnimation() {
     const statsSection = document.querySelector('.stats');
@@ -2563,7 +2503,6 @@ function initStatsAnimation() {
 
 // Initialize on load
 document.addEventListener('DOMContentLoaded', () => {
-    initBeforeAfterSlider();
     initStatsAnimation();
 });
 </script>
