@@ -19,13 +19,13 @@
 
         /* ===== BRAND COLORS ===== */
         :root {
-            --blue-primary: #2D5F8B;
-            --blue-dark: #1A3652;
-            --blue-darker: #0F2439;
-            --blue-light: #C5DCF0;
-            --blue-lightest: #E8F1FA;
-            --red-cta: #DC2626;
-            --red-hover: #B91C1C;
+            --blue-primary: #07496e;
+            --blue-dark: #053a57;
+            --blue-darker: #032a40;
+            --blue-light: #bddeff;
+            --blue-lightest: #f0f7ff;
+            --red-cta: #f00a0a;
+            --red-hover: #cc0808;
             --white: #FFFFFF;
             --gray-50: #F9FAFB;
             --gray-100: #F3F4F6;
@@ -33,7 +33,7 @@
             --gray-600: #4B5563;
             --gray-700: #374151;
             --gray-900: #111827;
-            --teal-dark: #163849;
+            --teal-dark: #043a54;
             --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
             --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
             --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
@@ -937,27 +937,15 @@
         }
 
         /* ===== 7. SERVICES ACCORDION ===== */
-        .services {
-            background: var(--gray-50);
-            padding: 80px 0;
-        }
-        .services-heading {
-            text-align: center;
-            margin-bottom: 12px;
-        }
+        
+        
         .services-heading h2 {
             font-size: 32px;
             font-weight: 800;
             color: var(--blue-dark);
         }
         .services-heading h2 em { font-style: normal; color: var(--red-cta); }
-        .services-sub {
-            text-align: center;
-            color: var(--gray-600);
-            font-size: 16px;
-            max-width: 650px;
-            margin: 0 auto 48px;
-        }
+        
         .accordion { max-width: 800px; margin: 0 auto; }
         .accordion-item {
             background: var(--white);
@@ -1103,10 +1091,7 @@
         .carousel-btn svg { width: 20px; height: 20px; fill: var(--blue-primary); transition: fill 0.2s; }
 
         /* ===== 9. VALUE PROPS ===== */
-        .value-props {
-            background: var(--blue-lightest);
-            padding: 80px 0;
-        }
+        
         .value-heading {
             text-align: center;
             margin-bottom: 12px;
@@ -1124,38 +1109,11 @@
             max-width: 700px;
             margin: 0 auto 48px;
         }
-        .value-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .value-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 16px 20px;
-            background: var(--white);
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-        }
-        .value-check {
-            width: 28px;
-            height: 28px;
-            background: var(--blue-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .value-check svg { width: 14px; height: 14px; fill: var(--white); }
-        .value-item span {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--gray-700);
-        }
+        
+        
+        
+        
+        
 
         /* ===== 10. STATS ===== */
         .stats {
@@ -1304,6 +1262,83 @@
         }
 
         /* ===== ULTRAWIDE / LARGE SCREEN ===== */
+        
+        /* ===== SERVICES CARD GRID ===== */
+        .services { background: #f0f7ff; padding: 80px 0; }
+        .services-heading { text-align: center; margin-bottom: 12px; }
+        .services-heading h2 { font-size: 32px; font-weight: 800; color: var(--blue-dark); }
+        .services-heading h2 em { font-style: normal; color: var(--red-cta); }
+        .services-sub { text-align: center; color: var(--gray-600); font-size: 16px; max-width: 650px; margin: 0 auto 48px; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1100px; margin: 0 auto; }
+        .service-card { background: var(--white); border-radius: 16px; padding: 32px 24px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; box-shadow: var(--shadow); }
+        .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+        .service-icon { width: 64px; height: 64px; background: var(--blue-primary); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+        .service-icon svg { width: 32px; height: 32px; fill: var(--white); }
+        .service-card h3 { font-size: 18px; font-weight: 700; color: var(--blue-dark); margin-bottom: 12px; }
+        .service-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
+
+        /* ===== VALUE PROPS CARD GRID ===== */
+        .value-props { background: #f0f7ff; padding: 80px 0; }
+        .value-heading { text-align: center; margin-bottom: 12px; }
+        .value-heading h2 { font-size: 32px; font-weight: 800; color: var(--blue-dark); }
+        .value-heading h2 em { font-style: normal; color: var(--red-cta); }
+        .value-sub { text-align: center; color: var(--gray-600); font-size: 16px; max-width: 700px; margin: 0 auto 48px; }
+        .value-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1300px; margin: 0 auto; }
+        .value-grid .value-card:nth-child(5) { grid-column: 2; }
+        .value-grid .value-card:nth-child(6) { grid-column: 3; }
+        .value-grid .value-card:nth-child(7) { grid-column: 4; }
+        .value-card { background: var(--white); border-radius: 12px; padding: 28px 24px; text-align: center; box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s; }
+        .value-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .value-icon { width: 56px; height: 56px; background: var(--blue-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+        .value-icon svg { width: 28px; height: 28px; fill: var(--white); }
+        .value-card h3 { font-size: 16px; font-weight: 700; color: var(--blue-dark); margin-bottom: 10px; }
+        .value-card p { font-size: 13px; color: var(--gray-600); line-height: 1.5; }
+
+        /* ===== RESPONSIVE: 968px (TABLET) ===== */
+        @media (max-width: 968px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+            .value-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .value-grid .value-card:nth-child(5) { grid-column: 1; }
+            .value-grid .value-card:nth-child(6) { grid-column: 2; }
+            .value-grid .value-card:nth-child(7) { grid-column: span 2; margin: 0 auto; max-width: calc(50% - 8px); }
+        }
+
+        /* ===== RESPONSIVE: 640px (MOBILE) ===== */
+        @media (max-width: 640px) {
+            .services-heading h2, .value-heading h2 { font-size: 24px; }
+            .services-sub, .value-sub { font-size: 14px; }
+            .services-grid { grid-template-columns: 1fr; gap: 16px; }
+            .service-card { padding: 24px 20px; }
+            .service-icon { width: 52px; height: 52px; }
+            .service-icon svg { width: 28px; height: 28px; }
+            .service-card h3 { font-size: 16px; }
+            .service-card p { font-size: 13px; }
+            .value-grid { grid-template-columns: 1fr; gap: 12px; }
+            .value-grid .value-card:nth-child(5), .value-grid .value-card:nth-child(6), .value-grid .value-card:nth-child(7) { grid-column: 1; max-width: 100%; }
+            .value-card { padding: 20px 16px; }
+            .value-icon { width: 48px; height: 48px; }
+            .value-icon svg { width: 24px; height: 24px; }
+            .value-card h3 { font-size: 14px; }
+            .value-card p { font-size: 12px; }
+        }
+
+        /* ===== RESPONSIVE: 380px (SMALL MOBILE) ===== */
+        @media (max-width: 380px) {
+            .services-heading h2, .value-heading h2 { font-size: 20px; }
+            .services-sub, .value-sub { font-size: 13px; margin-bottom: 36px; }
+            .service-card { padding: 20px 16px; }
+            .service-icon { width: 48px; height: 48px; margin-bottom: 12px; }
+            .service-icon svg { width: 24px; height: 24px; }
+            .service-card h3 { font-size: 15px; margin-bottom: 8px; }
+            .service-card p { font-size: 12px; }
+            .value-card { padding: 18px 14px; }
+            .value-icon { width: 44px; height: 44px; margin-bottom: 12px; }
+            .value-icon svg { width: 20px; height: 20px; }
+            .value-card h3 { font-size: 13px; margin-bottom: 8px; }
+            .value-card p { font-size: 11px; }
+        }
+
+
         @media (min-width: 1600px) {
             .container { max-width: 1400px; }
             .hero h1 { font-size: 52px; }
@@ -1926,98 +1961,48 @@
     </div>
 </section>
 
-<!-- ===== 7. SERVICES ACCORDION ===== -->
+<!-- ===== 7. SERVICES (CARD GRID) ===== -->
 <section class="services fade-up">
     <div class="container">
         <div class="services-heading">
             <h2>Customized Solutions <em>Designed for Your Home</em></h2>
         </div>
         <p class="services-sub">Our waterproofing professionals assess your specific needs and design a solution that fits your budget and ensures lasting protection.</p>
-        <div class="accordion">
-            <div class="accordion-item">
-                <button class="accordion-header" onclick="toggleAccordion(this)">
-                    Basement Waterproofing
-                    <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="accordion-body">
-                    <div class="accordion-body-inner">
-                        <p>Complete interior and exterior waterproofing for brick, stone, concrete, and all foundation types. We treat the problem at its source — not with band-aid fixes — ensuring your basement stays dry for the lifetime of your home.</p>
-                        <ul>
-                            <li>Interior perimeter drainage</li>
-                            <li>Exterior waterproofing membranes</li>
-                            <li>Wall vapor barriers</li>
-                            <li>Floor sealing &amp; coating</li>
-                        </ul>
-                    </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                 </div>
+                <h3>Basement Waterproofing</h3>
+                <p>Complete interior and exterior waterproofing systems to keep your basement permanently dry.</p>
             </div>
-            <div class="accordion-item">
-                <button class="accordion-header" onclick="toggleAccordion(this)">
-                    French Drain Installation
-                    <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="accordion-body">
-                    <div class="accordion-body-inner">
-                        <p>Custom-designed interior perimeter drain systems that channel water away from your foundation to sump pumps. Backed by our lifetime transferable guarantee — the gold standard in basement drainage.</p>
-                        <ul>
-                            <li>Interior perimeter systems</li>
-                            <li>Custom-fitted to your basement</li>
-                            <li>Lifetime transferable guarantee</li>
-                            <li>Clean installation, minimal disruption</li>
-                        </ul>
-                    </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
                 </div>
+                <h3>French Drain Installation</h3>
+                <p>Professional drainage systems that redirect water away from your foundation for good.</p>
             </div>
-            <div class="accordion-item">
-                <button class="accordion-header" onclick="toggleAccordion(this)">
-                    Sump Pump Services
-                    <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="accordion-body">
-                    <div class="accordion-body-inner">
-                        <p>Professional sump pump installation, repair, and replacement to keep water out of your basement. We pair the right pump system with your waterproofing solution for maximum protection.</p>
-                        <ul>
-                            <li>New pump installation</li>
-                            <li>Pump repair &amp; replacement</li>
-                            <li>Battery backup systems</li>
-                            <li>Discharge line routing</li>
-                        </ul>
-                    </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54h2.79v2h-4v-2h2.04L7.04 7.29h-2.36v-2h4v2h-2.04l2.75-3.54H9.59v-2h4v2h-2.04z"/></svg>
                 </div>
+                <h3>Sump Pump Services</h3>
+                <p>Installation, repair, and battery backup systems to protect against flooding.</p>
             </div>
-            <div class="accordion-item">
-                <button class="accordion-header" onclick="toggleAccordion(this)">
-                    Yard &amp; Storm Drainage
-                    <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="accordion-body">
-                    <div class="accordion-body-inner">
-                        <p>Proper exterior grading, yard drains, and downspout corrections to manage water before it ever reaches your foundation. Stop the problem before it starts.</p>
-                        <ul>
-                            <li>Yard drain installation</li>
-                            <li>Downspout corrections</li>
-                            <li>Exterior re-grading</li>
-                            <li>Storm water management</li>
-                        </ul>
-                    </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
                 </div>
+                <h3>Yard & Storm Drainage</h3>
+                <p>Custom grading and drainage solutions to eliminate standing water in your yard.</p>
             </div>
-            <div class="accordion-item">
-                <button class="accordion-header" onclick="toggleAccordion(this)">
-                    Crawl Space &amp; Foundation
-                    <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                </button>
-                <div class="accordion-body">
-                    <div class="accordion-body-inner">
-                        <p>Full crawl space encapsulation and foundation waterproofing for residential and commercial properties. We address moisture at every level of your home's structure.</p>
-                        <ul>
-                            <li>Crawl space encapsulation</li>
-                            <li>Foundation wall coatings</li>
-                            <li>Walls parging</li>
-                            <li>Mold remediation</li>
-                        </ul>
-                    </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h2v8H3zm4-8h2v16H7zm4-2h2v18h-2zm4 4h2v14h-2zm4-4h2v18h-2z"/></svg>
                 </div>
+                <h3>Crawl Space & Foundation Repair</h3>
+                <p>Encapsulation, structural repair, and moisture control for a solid foundation.</p>
             </div>
         </div>
     </div>
@@ -2078,7 +2063,7 @@
     </div>
 </section>
 
-<!-- ===== 9. VALUE PROPS ===== -->
+<!-- ===== 9. VALUE PROPS (CARD GRID) ===== -->
 <section class="value-props fade-up">
     <div class="container">
         <div class="value-heading">
@@ -2086,41 +2071,54 @@
         </div>
         <p class="value-sub">Nearly 50 years of family-owned excellence. Here's what sets us apart from every other waterproofing company.</p>
         <div class="value-grid">
-            <div class="value-item">
-                <div class="value-check">
-                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+            <div class="value-card">
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S15.33 8 14.5 8 13 8.67 13 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S8.33 8 7.5 8 6 8.67 6 9.5 6.67 11 7.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>
                 </div>
-                <span>Owner on Every Job</span>
+                <h3>Owner on Every Job</h3>
+                <p>The owner personally oversees every project to ensure quality and accountability.</p>
             </div>
-            <div class="value-item">
-                <div class="value-check">
-                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+            <div class="value-card">
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54h2.79v2h-4v-2h2.04L7.04 7.29h-2.36v-2h4v2h-2.04l2.75-3.54H9.59v-2h4v2h-2.04z"/></svg>
                 </div>
-                <span>Lifetime Guarantee</span>
+                <h3>Comprehensive Solutions</h3>
+                <p>Interior and exterior waterproofing, basement flood repair, and full drainage solutions.</p>
             </div>
-            <div class="value-item">
-                <div class="value-check">
-                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+            <div class="value-card">
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                 </div>
-                <span>No Salesmen</span>
+                <h3>Expert Craftsmanship</h3>
+                <p>Skilled professionals with meticulous workmanship and attention to detail.</p>
             </div>
-            <div class="value-item">
-                <div class="value-check">
-                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+            <div class="value-card">
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6.18L23 9 12 3z"/></svg>
                 </div>
-                <span>Flexible Financing</span>
+                <h3>Flexible Financing</h3>
+                <p>Convenient financing options with payment plans available up to 60 months.</p>
             </div>
-            <div class="value-item">
-                <div class="value-check">
-                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+            <div class="value-card">
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                 </div>
-                <span>Meticulous Workmanship</span>
+                <h3>Guaranteed Quality</h3>
+                <p>Written, transferable lifetime warranty for long-term peace of mind.</p>
             </div>
-            <div class="value-item">
-                <div class="value-check">
-                    <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+            <div class="value-card">
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S15.33 8 14.5 8 13 8.67 13 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S8.33 8 7.5 8 6 8.67 6 9.5 6.67 11 7.5 11z"/></svg>
                 </div>
-                <span>24/7 Emergency Service</span>
+                <h3>Affordable & Trusted</h3>
+                <p>Fair pricing and highly recommended by satisfied homeowners.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54h2.79v2h-4v-2h2.04L7.04 7.29h-2.36v-2h4v2h-2.04l2.75-3.54H9.59v-2h4v2h-2.04z"/></svg>
+                </div>
+                <h3>Clean & Efficient</h3>
+                <p>We respect your home and leave your space cleaner than we found it.</p>
             </div>
         </div>
     </div>
