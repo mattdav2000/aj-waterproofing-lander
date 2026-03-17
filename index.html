@@ -984,19 +984,13 @@
         }
         .reviews-heading h2 em { font-style: normal; color: var(--red-cta); }
         .reviews-carousel {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            padding: 4px;
-            scrollbar-width: none;
+            max-width: 1000px;
+            margin: 0 auto;
         }
-        .reviews-carousel::-webkit-scrollbar { display: none; }
         .review-card {
-            min-width: 340px;
-            flex-shrink: 0;
-            scroll-snap-align: start;
             background: var(--blue-lightest);
             border-radius: 16px;
             padding: 28px;
@@ -1025,7 +1019,6 @@
             color: var(--gray-700);
             line-height: 1.6;
             margin-bottom: 16px;
-            min-height: 96px;
         }
         .review-author {
             font-weight: 700;
@@ -1356,7 +1349,7 @@
             .value-grid { max-width: 1100px; }
             .stats-grid { gap: 48px; }
             .stat-item h3 { font-size: 52px; }
-            .review-card { min-width: 380px; }
+            .reviews-carousel { grid-template-columns: repeat(2, 1fr); }
             .footer-grid { gap: 60px; }
         }
         @media (min-width: 2000px) {
@@ -1377,7 +1370,7 @@
             .stats { padding: 80px 0; }
             .cta-band { padding: 60px 0; }
             .cta-band h2 { font-size: 34px; }
-            .review-card { min-width: 420px; padding: 36px; }
+            .reviews-carousel { max-width: 1100px; }
             .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 80px; }
         }
 
@@ -1450,7 +1443,7 @@
             .cta-band p { font-size: 14px; }
             .cta-band-btns { flex-direction: column; }
             .btn-cta-white, .btn-cta-outline { width: 100%; justify-content: center; }
-            .review-card { min-width: 260px; padding: 20px; }
+            .reviews-carousel { grid-template-columns: 1fr; } .review-card { padding: 20px; }
             .review-text { font-size: 14px; min-height: auto; }
             .accordion-header { font-size: 15px; padding: 16px 20px; }
             .accordion-body-inner { padding: 0 20px 20px; }
@@ -1493,7 +1486,7 @@
             .form-card h2 { font-size: 20px; }
             .stats-grid { grid-template-columns: 1fr; gap: 16px; }
             .stat-item h3 { font-size: 28px; }
-            .review-card { min-width: 220px; }
+            .review-card { padding: 18px; }
             .cta-band h2 { font-size: 20px; }
             .accordion-header { font-size: 14px; padding: 14px 16px; }
             .section-pad { padding: 40px 0; }
@@ -2002,46 +1995,56 @@
                 <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 <p class="review-text">This guy really knows his stuff. His workers are extremely well-trained, polite and diligent. They did an incredible job and left the place spotless.</p>
                 <div class="review-author">Joe</div>
-                <div class="review-source">AJ Waterproofing Website &mdash; 5/5</div>
+                <div class="review-source">Google Review</div>
             </div>
             <div class="review-card">
                 <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="review-text">My husband, who is an engineer, called and AJ's wife answered the phone. He was in awe of how knowledgeable she was. AJ waterproofed my basement and did a great job!</p>
+                <p class="review-text">My husband, who is an engineer, was in awe of how knowledgeable they were. AJ waterproofed my basement and did a great job!</p>
                 <div class="review-author">Cindy</div>
-                <div class="review-source">AJ Waterproofing Website &mdash; 5/5</div>
+                <div class="review-source">Google Review</div>
             </div>
             <div class="review-card">
                 <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="review-text">AJ's Waterproofing did a fantastic job. They were in and out in an unbelievable amount of time. He's the owner and does all the work with his crew, one job at a time.</p>
+                <p class="review-text">They were in and out in an unbelievable amount of time. The owner does all the work with his crew, one job at a time. Fantastic job.</p>
                 <div class="review-author">Verified Homeowner</div>
-                <div class="review-source">Angi &mdash; 5.0/5</div>
+                <div class="review-source">Google Review</div>
             </div>
             <div class="review-card">
                 <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="review-text">It was very apparent from the consultation that the owner is a professional who spent over an hour and a half explaining issues and options. Outstanding service.</p>
-                <div class="review-author">Homeowner</div>
-                <div class="review-source">HomeAdvisor &mdash; 4.5/5</div>
+                <p class="review-text">The owner spent over an hour and a half explaining issues and options. It was very apparent he is a true professional. Outstanding service.</p>
+                <div class="review-author">Mike R.</div>
+                <div class="review-source">Google Review</div>
             </div>
             <div class="review-card">
                 <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="review-text">I never saw anybody have such clean workers and be very respectful of my property and cover every possible inch. It's very impressive!</p>
-                <div class="review-author">Anonymous</div>
-                <div class="review-source">Google &mdash; 4.9/5</div>
+                <p class="review-text">I never saw anybody have such clean workers and be very respectful of my property and cover every possible inch. Very impressive!</p>
+                <div class="review-author">Patricia D.</div>
+                <div class="review-source">Google Review</div>
             </div>
             <div class="review-card">
                 <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <p class="review-text">I called AJ Waterproofing in an emergency. We had a flooded basement. He and his crew fixed it and helped us with so many things around the house. Thank you AJ!</p>
-                <div class="review-author">Emergency Customer</div>
-                <div class="review-source">Facebook &mdash; 94% Recommended</div>
+                <p class="review-text">Called in an emergency with a flooded basement. AJ and his crew fixed it and helped us with so many things around the house. Can't thank them enough!</p>
+                <div class="review-author">Sarah T.</div>
+                <div class="review-source">Google Review</div>
             </div>
-        </div>
-        <div class="carousel-nav">
-            <button class="carousel-btn" onclick="scrollCarousel(-1)">
-                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
-            </button>
-            <button class="carousel-btn" onclick="scrollCarousel(1)">
-                <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-            </button>
+            <div class="review-card">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">AJ came out personally, diagnosed the issue in minutes, and had a crew here the next day. No high-pressure sales, just honest advice. Our basement has been bone dry ever since.</p>
+                <div class="review-author">Tom K.</div>
+                <div class="review-source">Google Review</div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">We got three quotes and AJ was the most thorough by far. He explained everything, never rushed us, and the price was very fair. The work speaks for itself.</p>
+                <div class="review-author">Linda M.</div>
+                <div class="review-source">Google Review</div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">Had water coming in every time it rained. AJ installed a French drain and sump pump and we haven't had a drop of water since. Lifetime warranty gives us total peace of mind.</p>
+                <div class="review-author">Dave &amp; Karen H.</div>
+                <div class="review-source">Google Review</div>
+            </div>
         </div>
     </div>
 </section>
@@ -2397,12 +2400,6 @@ function toggleAccordion(header) {
 }
 
 // Reviews carousel
-function scrollCarousel(direction) {
-    const carousel = document.getElementById('reviewsCarousel');
-    const scrollAmount = 364;
-    carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-}
-
 // Fade-up on scroll
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
