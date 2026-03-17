@@ -1276,9 +1276,6 @@
         .value-heading h2 em { font-style: normal; color: var(--red-cta); }
         .value-sub { text-align: center; color: var(--gray-600); font-size: 16px; max-width: 700px; margin: 0 auto 48px; }
         .value-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1300px; margin: 0 auto; }
-        .value-grid .value-card:nth-child(5) { grid-column: 2; }
-        .value-grid .value-card:nth-child(6) { grid-column: 3; }
-        .value-grid .value-card:nth-child(7) { grid-column: 4; }
         .value-card { background: var(--white); border-radius: 12px; padding: 28px 24px; text-align: center; box-shadow: var(--shadow); transition: transform 0.3s, box-shadow 0.3s; }
         .value-card:hover { transform: translateY(-8px); box-shadow: 0 16px 32px rgba(7, 73, 110, 0.15); }
         .value-icon { width: 56px; height: 56px; background: var(--blue-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
@@ -1293,9 +1290,6 @@
         @media (max-width: 968px) {
             .services-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
             .value-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-            .value-grid .value-card:nth-child(5) { grid-column: 1; }
-            .value-grid .value-card:nth-child(6) { grid-column: 2; }
-            .value-grid .value-card:nth-child(7) { grid-column: span 2; margin: 0 auto; max-width: calc(50% - 8px); }
         }
 
         /* ===== RESPONSIVE: 640px (MOBILE) ===== */
@@ -1309,7 +1303,6 @@
             .service-card h3 { font-size: 16px; }
             .service-card p { font-size: 13px; }
             .value-grid { grid-template-columns: 1fr; gap: 12px; }
-            .value-grid .value-card:nth-child(5), .value-grid .value-card:nth-child(6), .value-grid .value-card:nth-child(7) { grid-column: 1; max-width: 100%; }
             .value-card { padding: 20px 16px; }
             .value-icon { width: 48px; height: 48px; }
             .value-icon svg { width: 24px; height: 24px; }
@@ -2089,8 +2082,8 @@
                 <div class="value-icon">
                     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                 </div>
-                <h3>Guaranteed Quality</h3>
-                <p>Written, transferable lifetime warranty for long-term peace of mind.</p>
+                <h3>Locally Owned</h3>
+                <p>A proud local business rooted in the community for over 50 years.</p>
             </div>
             <div class="value-card">
                 <div class="value-icon">
@@ -2105,6 +2098,13 @@
                 </div>
                 <h3>Clean & Efficient</h3>
                 <p>We respect your home and leave your space cleaner than we found it.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                </div>
+                <h3>Lifetime Warranty</h3>
+                <p>Written, transferable lifetime warranty on every job for total peace of mind.</p>
             </div>
         </div>
     </div>
