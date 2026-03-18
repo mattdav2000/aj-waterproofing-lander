@@ -834,18 +834,9 @@
 
         /* ===== 6. PROBLEM CARDS ===== */
         .problems {
-            background: var(--red-cta);
+            background: var(--white);
             padding: 80px 0;
-            position: relative;
-            overflow: hidden;
         }
-        .problems::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.25) 100%);
-        }
-        .problems .container { position: relative; z-index: 1; }
         .problems-heading {
             text-align: center;
             margin-bottom: 12px;
@@ -853,13 +844,13 @@
         .problems-heading h2 {
             font-size: 36px;
             font-weight: 900;
-            color: var(--white);
+            color: var(--blue-dark);
             letter-spacing: -0.02em;
         }
-        .problems-heading h2 em { font-style: normal; color: var(--white); text-decoration: underline; text-decoration-color: rgba(255,255,255,0.4); text-underline-offset: 6px; }
+        .problems-heading h2 em { font-style: normal; color: var(--red-cta); }
         .problems-sub {
             text-align: center;
-            color: rgba(255, 255, 255, 0.9);
+            color: var(--gray-600);
             font-size: 17px;
             max-width: 700px;
             margin: 0 auto 48px;
@@ -870,25 +861,24 @@
             gap: 20px;
         }
         .problem-card {
-            background: rgba(255,255,255,0.12);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255,255,255,0.2);
+            background: var(--gray-50);
             border-radius: 14px;
             padding: 32px 24px;
-            transition: transform 0.3s, background 0.3s;
-            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
+            border-left: 4px solid var(--red-cta);
         }
-        .problem-card:hover { transform: translateY(-4px); background: rgba(255,255,255,0.22); }
+        .problem-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(7, 73, 110, 0.12); }
         .problem-icon { display: none; }
         .problem-card h3 {
             font-size: 20px;
             font-weight: 800;
-            color: var(--white);
+            color: var(--blue-dark);
             margin-bottom: 10px;
         }
         .problem-card p {
             font-size: 15px;
-            color: rgba(255,255,255,0.9);
+            color: var(--gray-600);
             line-height: 1.6;
         }
 
