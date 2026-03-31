@@ -2204,11 +2204,29 @@ function goToStep(step) {
     }
     if (step === 3) {
         const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
         const phone = document.getElementById('phone').value;
         const email = document.getElementById('email').value;
         if (!firstName) { document.getElementById('firstName').focus(); return; }
         if (!phone) { document.getElementById('phone').focus(); return; }
         if (!email) { document.getElementById('email').focus(); return; }
+
+        // Submit form data to Formspree
+        const formData = {
+            service: document.getElementById('service').value,
+            zip: document.getElementById('formZip').value,
+            firstName: firstName,
+            lastName: lastName,
+            phone: phone,
+            email: email,
+            _subject: 'New Lead from help.ajwaterproofing.com'
+        };
+
+        fetch('https://formspree.io/f/xkopbyrj', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(formData)
+        }).catch(function(err) { console.error('Form submission error:', err); });
     }
 
     // Update steps
