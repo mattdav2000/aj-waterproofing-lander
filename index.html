@@ -2231,7 +2231,12 @@ function goToStep(step) {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
             body: JSON.stringify(formData)
+        }).then(function(response) {
+            if (response.ok) {
+                window.location.href = '/thank-you.html';
+            }
         }).catch(function(err) { console.error('Form submission error:', err); });
+        return;
     }
 
     // Update steps
